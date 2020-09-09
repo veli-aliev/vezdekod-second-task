@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_background"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <EditText
+
+            android:id="@+id/cityET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/searchBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Найти" />
+    </LinearLayout>
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/costListRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="90dp"
+            android:divider="@null"
+            android:dividerHeight="0dp" />
+
+        <RelativeLayout
+            android:id="@+id/closeRL"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@mipmap/close">
+
+            </ImageView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/black_background">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#404F54">
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nextBTN"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="36dp"
+
+                android:layout_marginRight="36dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/fisrt_gr"
+                android:gravity="center"
+                android:textColor="@color/black_background">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Найти авиабилеты и отели"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black_background"
+                    android:textSize="16sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/progressRL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_background"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="202dp"
+                android:layout_height="202dp"
+                android:layout_centerInParent="true"
+                android:background="@color/black_background"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/loaderIV"
+                    android:layout_width="202dp"
+                    android:layout_height="202dp"
+                    android:src="@mipmap/loader">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Собираем\nданные"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold">
+
+                </TextView>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
